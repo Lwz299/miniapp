@@ -51,8 +51,6 @@ export default function Register() {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4" style={{ background: 'var(--gradient-hero-insurance)' }}>
             <UserPlus className="h-8 w-8 text-white" />
           </div>
-          <h1 className="text-2xl font-bold mb-2">إنشاء حساب جديد</h1>
-          <p className="text-muted-foreground">ابدأ رحلتك معنا اليوم</p>
         </div>
 
         <Card className="border-0 shadow-xl">

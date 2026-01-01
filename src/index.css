@@ -3,6 +3,30 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  html {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    touch-action: manipulation;
+  }
+  
+  body {
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  input, textarea, select {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
   :root {
     /* Company Primary Colors */
     --main-sv-color-rgb: 29, 93, 108;
@@ -167,19 +191,20 @@
   direction: rtl;
 }
 
-/* Smooth Scrolling */
+/* Smooth Scrolling & Fixed Viewport */
 html {
   scroll-behavior: smooth;
+  font-size: 16px; /* Keep at 16px to prevent zoom on inputs */
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
-/* Mobile-first styles */
-html {
-  font-size: 16px;
-}
-
+/* Mobile-first styles - Keep font size consistent to prevent zoom */
 @media (max-width: 640px) {
   html {
-    font-size: 14px;
+    font-size: 16px; /* Keep at 16px to prevent zoom on inputs in mini app */
   }
 }
 

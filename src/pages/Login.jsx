@@ -5,7 +5,6 @@ import { Button } from '../components/ui/button'
 import { Input } from '../components/ui/input'
 import { Label } from '../components/ui/label'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card'
-import { Shield } from 'lucide-react'
 
 export default function Login() {
   const [email, setEmail] = useState('')
@@ -54,13 +53,13 @@ export default function Login() {
       <div className="w-full max-w-md">
         {/* Logo/Icon */}
         <div className="text-center mb-6">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4" style={{ background: 'var(--gradient-hero-insurance)' }}>
-            <Shield className="h-8 w-8 text-white" />
+          <div className="inline-flex items-center justify-center mb-4">
+            <img 
+              src="/tasklist.svg" 
+              alt="تأمين السفر" 
+              className="w-56 h-56 object-contain"
+            />
           </div>
-          <h1 className="text-2xl font-bold mb-2">مرحباً بك</h1>
-          <p className="text-muted-foreground">
-            {isMiniApp ? 'سجل الدخول عبر حسابك' : 'سجل الدخول للوصول إلى حسابك'}
-          </p>
         </div>
 
         <Card className="border-0 shadow-xl">
